@@ -68,17 +68,17 @@ body {
     background: $color-blue-medium;
     color: #fff;
 
-    &__text{
-        &--sub{
+    &__text {
+        &--sub {
             display: block;
         }
 
-        &--primary{
+        &--primary {
             display: block;
         }
     }
 
-    &__icon{
+    &__icon {
         width: 2rem;
     }
 
@@ -96,11 +96,16 @@ body {
     height: 50vh;
     background: #fff;
 
-    &__navigation{
+    &__navigation {
         background: violet;
     }
 
-    &__table{
+    &__table {
         background: yellowgreen;
+    }
+
+    &__icon {
+        width: 5rem;
+        
     }
 }

@@ -67,4 +67,8 @@ body {
 .content__table {
   background: yellowgreen;
 }
+
+.content__icon {
+  width: 5rem;
+}
 /*# sourceMappingURL=style.css.map */
