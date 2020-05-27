@@ -9,11 +9,53 @@
     <title>🎁 Snappet Front-end Challenge by Julia Wilhelm</title>
 </head>
 
-
 <body>
 
-<h1>Snappet Front-end Challenge</h1>
+    <header class="header">
+        <div class="header__text-box"></div>
+        <h1>
+            <span class="header__text--sub"> Dashboard / Snappet /</span>
 
-<script src="/script.js"></script>
+            <span class="header__text--primary"><img class="header__icon" src="/icons/gift.svg" alt="Gift">Front-End
+                Challenge</span>
+        </h1>
+
+        </div>
+
+    </header>
+
+    <div class="content">
+        <div class="content__navigation">
+            <button>hardness</button>
+            <button>person</button>
+            <select name="mathGrade" id="mathGrade">
+                <option value="grade4">Math grade 1</option>
+                <option value="grade4">Math grade 2</option>
+                <option value="grade3">Math grade 3</option>
+                <option value="grade4">Math grade 4</option>
+                <option value="grade5">Math grade 5</option>
+            </select>
+            <button>Add learning objective</button>
+            <button>Automatic update</button>
+        </div>
+        <div class="content__table">
+            <table>
+                <tr>
+                    <th>Learn Objective</th>
+                    <th>Pupils</th>
+                    <th>Show details</th>
+                </tr>
+                <tr>
+                    <td>Doortellen</td>
+                    <td>Circles</td>
+                    <td><button>Show details</button></td>
+                </tr>
+            </table>
+        </div>
+
+    </div>
+
+    <script src="/script.js"></script>
 </body>
+
 </html>

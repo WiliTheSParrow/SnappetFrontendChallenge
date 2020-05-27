@@ -10,11 +10,32 @@ $color-red: #c32552;
 $color-yellow: #fee342;
 
 ///////////////////////////////////////
-//FONT VARIABLES
+//RESPONSIVE BREAKPOINTS & MIXINS
+//1280 (desktop), 786 (tablet) and 544 (mobile)
+//1em = 16px
 
-///////////////////////////////////////
-//RESPONSIVE BREAKPOINTS
+$bp-desktop:80em;
+$bp-tablet:49.13em;
+$bp-mobile:34em;
 
+@mixin respond($breakpoint) {
+    @if $breakpoint==phone {
+        @media only screen and (max-width: $bp-mobile) {
+            @content
+        }
+
+        ;
+    }
+
+    @if $breakpoint==tablet {
+        @media only screen and (max-width: $bp-tablet) {
+            @content
+        }
+
+        ;
+    }
+
+}
 
 ///////////////////////////////////////
 //BASE
@@ -39,7 +60,47 @@ body {
 }
 
 ///////////////////////////////////////
-//LAYOUT
 
-///////////////////////////////////////
-//COMPONENTS
+.header {
+    display: flex;
+    justify-content: center;
+    height: 20vh;
+    background: $color-blue-medium;
+    color: #fff;
+
+    &__text{
+        &--sub{
+            display: block;
+        }
+
+        &--primary{
+            display: block;
+        }
+    }
+
+    &__icon{
+        width: 2rem;
+    }
+
+
+    @include respond(tablet) {
+        background: orangered;
+    }
+
+    @include respond(phone) {
+        background: greenyellow;
+    }
+}
+
+.content {
+    height: 50vh;
+    background: #fff;
+
+    &__navigation{
+        background: violet;
+    }
+
+    &__table{
+        background: yellowgreen;
+    }
+}

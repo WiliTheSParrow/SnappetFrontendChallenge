@@ -18,4 +18,53 @@ body {
   color: #333333;
   background: #f3f5f8;
 }
+
+.header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 20vh;
+  background: #35a3d7;
+  color: #fff;
+}
+
+.header__text--sub {
+  display: block;
+}
+
+.header__text--primary {
+  display: block;
+}
+
+.header__icon {
+  width: 2rem;
+}
+
+@media only screen and (max-width: 49.13em) {
+  .header {
+    background: orangered;
+  }
+}
+
+@media only screen and (max-width: 34em) {
+  .header {
+    background: greenyellow;
+  }
+}
+
+.content {
+  height: 50vh;
+  background: #fff;
+}
+
+.content__navigation {
+  background: violet;
+}
+
+.content__table {
+  background: yellowgreen;
+}
 /*# sourceMappingURL=style.css.map */
