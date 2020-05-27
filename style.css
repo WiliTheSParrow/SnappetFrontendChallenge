@@ -29,6 +29,13 @@ body {
   height: 20vh;
   background: #35a3d7;
   color: #fff;
+  /*  @include respond(tablet) {
+        background: orangered;
+    }
+
+    @include respond(phone) {
+        background: greenyellow;
+    } */
 }
 
 .header__text--sub {
@@ -43,25 +50,9 @@ body {
   width: 2rem;
 }
 
-@media only screen and (max-width: 49.13em) {
-  .header {
-    background: orangered;
-  }
-}
-
-@media only screen and (max-width: 34em) {
-  .header {
-    background: greenyellow;
-  }
-}
-
 .content {
   height: 50vh;
   background: #fff;
-}
-
-.content__navigation {
-  background: violet;
 }
 
 .content__table {

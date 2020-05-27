@@ -82,23 +82,18 @@ body {
         width: 2rem;
     }
 
-
-    @include respond(tablet) {
+   /*  @include respond(tablet) {
         background: orangered;
     }
 
     @include respond(phone) {
         background: greenyellow;
-    }
+    } */
 }
 
 .content {
     height: 50vh;
     background: #fff;
-
-    &__navigation {
-        background: violet;
-    }
 
     &__table {
         background: yellowgreen;
@@ -106,6 +101,5 @@ body {
 
     &__icon {
         width: 5rem;
-        
     }
 }
