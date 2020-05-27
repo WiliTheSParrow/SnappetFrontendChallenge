@@ -1,1 +1,21 @@
-/* No CSS *//*# sourceMappingURL=style.css.map */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
+}
+
+html {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-size: 62.5%;
+}
+
+body {
+  font-family: 'Alegreya Sans', sans-serif;
+  color: #333333;
+  background: #f3f5f8;
+}
+/*# sourceMappingURL=style.css.map */
