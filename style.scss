@@ -77,17 +77,27 @@ body {
         justify-content: center;
         position: absolute;
         top: 5%;
-        // width: 100%;
+        width: 100%;
     }
 
     &__text {
         &--sub {
             border: 2px solid yellowgreen;
+            text-align: center;
         }
 
         &--primary {
             border: 2px solid yellowgreen;
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
+    }
+
+    &__title {
+        &--sub {}
+
+        &--primary {}
     }
 
     &__icon {
