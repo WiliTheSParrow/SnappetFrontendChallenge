@@ -164,15 +164,25 @@ body {
     }
 
     &__button {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        background-color: #fff;
-        cursor: pointer;
-        width: 4.3rem;
-        height: 4.3rem;
-        border: 1px solid $color-grey-light-2;
-        box-shadow: $shadow-base;
+
+        &,
+        &:link,
+        &:visited {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #fff;
+            cursor: pointer;
+            width: 4.3rem;
+            height: 4.3rem;
+            border: 1px solid $color-grey-light-2;
+            box-shadow: $shadow-base;
+            transition: all .3s;
+        }
+
+        &:focus {
+            outline: none;
+        }
 
         &--ball {
             border-radius: 3px 0 0 3px;
@@ -222,6 +232,7 @@ body {
         border-radius: 3px;
         box-shadow: $shadow-base;
         cursor: pointer;
+        transition: all .3s;
     }
 
     &:hover {
