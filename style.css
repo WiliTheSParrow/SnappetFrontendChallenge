@@ -261,4 +261,12 @@ body {
 .content__table {
   background: yellowgreen;
 }
+
+.content__table table {
+  width: 100%;
+}
+
+.content__table--header {
+  border: 2px solid orangered;
+}
 /*# sourceMappingURL=style.css.map */

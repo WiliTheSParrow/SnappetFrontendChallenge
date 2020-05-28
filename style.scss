@@ -285,5 +285,16 @@ body {
 
     &__table {
         background: yellowgreen;
+        // width: 100%;
+
+        table {
+            width: 100%;
+        }
+
+        &--header {
+            border: 2px solid orangered;
+        }
+
+        &--row {}
     }
 }
