@@ -57,38 +57,46 @@ body {
     font-family: 'Alegreya Sans', sans-serif;
     color: $color-grey-dark;
     background: $color-grey-light;
+
 }
 
 ///////////////////////////////////////
 
 .header {
-    display: flex;
-    justify-content: center;
-    height: 20vh;
+    border: 2px solid orangered;
+    height: 25vh;
     background: $color-blue-medium;
     color: #fff;
+    display: flex;
+    justify-content: center;
+
+    &__text-box {
+        border: 2px solid violet;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        position: absolute;
+        top: 5%;
+        // width: 100%;
+    }
 
     &__text {
         &--sub {
-            display: block;
+            border: 2px solid yellowgreen;
         }
 
         &--primary {
-            display: block;
+            border: 2px solid yellowgreen;
         }
     }
 
     &__icon {
-        width: 2rem;
+        width: 4.5rem;
+        height: 4.5rem;
+        background: #fff;
+        mask: url(/icons/gift.svg);
     }
 
-   /*  @include respond(tablet) {
-        background: orangered;
-    }
-
-    @include respond(phone) {
-        background: greenyellow;
-    } */
 }
 
 .content {

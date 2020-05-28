@@ -20,34 +20,48 @@ body {
 }
 
 .header {
+  border: 2px solid orangered;
+  height: 25vh;
+  background: #35a3d7;
+  color: #fff;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  height: 20vh;
-  background: #35a3d7;
-  color: #fff;
-  /*  @include respond(tablet) {
-        background: orangered;
-    }
+}
 
-    @include respond(phone) {
-        background: greenyellow;
-    } */
+.header__text-box {
+  border: 2px solid violet;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: absolute;
+  top: 5%;
 }
 
 .header__text--sub {
-  display: block;
+  border: 2px solid yellowgreen;
 }
 
 .header__text--primary {
-  display: block;
+  border: 2px solid yellowgreen;
 }
 
 .header__icon {
-  width: 2rem;
+  width: 4.5rem;
+  height: 4.5rem;
+  background: #fff;
+  -webkit-mask: url(/icons/gift.svg);
+          mask: url(/icons/gift.svg);
 }
 
 .content {
