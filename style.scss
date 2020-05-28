@@ -67,7 +67,7 @@ body {
 }
 
 ///////////////////////////////////////
-
+//HEADER
 .header {
     // border: 2px solid orangered;
     height: 25vh;
@@ -123,12 +123,17 @@ body {
 
 }
 
+///////////////////////////////////////
+//CONTENT
 .content {
     height: 50vh;
     margin: -3vw 5vw 0 5vw;
     background: #fff;
     border-radius: 10px;
     padding: 3rem;
+
+    ///////////////////////////////////////
+    //NAVIGATION BAR
 
     &__navigation {
         // background: fuchsia;
@@ -149,10 +154,6 @@ body {
             align-items: center;
             justify-content: space-between;
         }
-    }
-
-    &__table {
-        background: yellowgreen;
     }
 
     &__icon {
@@ -196,6 +197,10 @@ body {
         }
     }
 
+    .active {
+        box-shadow: $shadow-active;
+    }
+
     &__gradeselect {
         height: 4.3rem;
         margin: 0 1rem;
@@ -211,70 +216,74 @@ body {
         background-size: 1.5rem;
         background-position: right 1.5rem center;
     }
-}
 
-.active {
-    box-shadow: $shadow-active;
-}
+    ///////////////////////////////////////
+    //FEATURE BUTTONS
 
-.button__features {
+    .button__features {
 
-    &,
-    &:link,
-    &:visited {
-        display: flex;
-        align-items: center;
-        height: 4.3rem;
-        margin: 0 0 0 1rem;
-        padding: .5rem 1.5rem;
-        color: #fff;
-        border: none;
-        border-radius: 3px;
-        box-shadow: $shadow-base;
-        cursor: pointer;
-        transition: all .3s;
-    }
+        &,
+        &:link,
+        &:visited {
+            display: flex;
+            align-items: center;
+            height: 4.3rem;
+            margin: 0 0 0 1rem;
+            padding: .5rem 1.5rem;
+            color: #fff;
+            border: none;
+            border-radius: 3px;
+            box-shadow: $shadow-base;
+            cursor: pointer;
+            transition: all .3s;
+        }
 
-    &:hover {
-        transform: translateY(-0.3rem);
-        box-shadow: 0 1rem 2rem rgba(#000, .2);
-    }
+        &:hover {
+            transform: translateY(-0.3rem);
+            box-shadow: 0 1rem 2rem rgba(#000, .2);
+        }
 
-    &:after {
-        transform: scaleX(1.4) scaleY(1.6);
-        opacity: 0;
-    }
+        &:after {
+            transform: scaleX(1.4) scaleY(1.6);
+            opacity: 0;
+        }
 
-    &:active,
-    &:focus {
-        outline: none;
-        transform: translateY(-0.1rem);
-        box-shadow: 0 .5rem 1rem rgba(#000, .2);
-    }
-
-    &--obj {
-        background: $color-blue-medium;
-    }
-
-    &--upd {
-        background: $color-red;
-    }
-
-    &--icon {
-        width: 2.5rem;
-        height: 2.5rem;
-        background: #fff;
-
-        margin-left: .5rem;
+        &:active,
+        &:focus {
+            outline: none;
+            transform: translateY(-0.1rem);
+            box-shadow: 0 .5rem 1rem rgba(#000, .2);
+        }
 
         &--obj {
-            mask: url(icons/plus.svg) no-repeat;
+            background: $color-blue-medium;
         }
 
         &--upd {
-            mask: url(icons/refresh.svg) no-repeat;
+            background: $color-red;
+        }
+
+        &--icon {
+            width: 2.5rem;
+            height: 2.5rem;
+            background: #fff;
+
+            margin-left: .5rem;
+
+            &--obj {
+                mask: url(icons/plus.svg) no-repeat;
+            }
+
+            &--upd {
+                mask: url(icons/refresh.svg) no-repeat;
+            }
         }
     }
 
+    ///////////////////////////////////////
+    //NAVIGATION TABLE
 
+    &__table {
+        background: yellowgreen;
+    }
 }
