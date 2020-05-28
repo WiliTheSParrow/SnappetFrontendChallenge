@@ -11,6 +11,10 @@ $color-red: #c32552;
 $color-yellow: #fee342;
 
 ///////////////////////////////////////
+//SHADOWS
+$shadow-base: 0 1px 2px 0 rgba(0,0,0,0.2);
+
+///////////////////////////////////////
 //RESPONSIVE BREAKPOINTS & MIXINS
 //1280 (desktop), 786 (tablet) and 544 (mobile)
 //1em = 16px
@@ -165,18 +169,19 @@ body {
         width: 4rem;
         height: 4rem;
         border: 1px solid $color-grey-light-2;
+        box-shadow: $shadow-base;
 
         &--ball {
             border-radius: 3px 0 0 3px;
             border-right: .5px solid $color-grey-light-2;
-            margin-right: 0;
+           
 
         }
 
         &--person {
             border-radius: 0 3px 3px 0;
             border-left: .5px solid $color-grey-light-2;
-            margin-left: 0;
+           
         }
 
     }
@@ -187,5 +192,6 @@ body {
         border: 1px solid $color-grey-light-2;
         border-radius: 3px;
         cursor: pointer;
+        box-shadow: $shadow-base;
     }
 }
