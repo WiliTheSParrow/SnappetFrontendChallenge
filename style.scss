@@ -54,7 +54,8 @@ html {
 }
 
 body {
-    font-family: 'Roboto', sans-serif;;
+    font-family: 'ABeeZee', sans-serif;
+
     color: $color-grey-dark;
     background: $color-grey-light;
 
@@ -98,16 +99,18 @@ body {
     &__title {
         &--sub {
             font-size: 1.5rem;
+            font-weight: 500;
         }
 
         &--primary {
-            font-size: 4.5rem;
+            font-size: 5rem;
         }
     }
 
     &__icon {
-        width: 4.5rem;
-        height: 4.5rem;
+        width: 4.7rem;
+        height: 4.7rem;
+        margin: .5rem;
         background: #fff;
         mask: url(/icons/gift.svg);
     }
