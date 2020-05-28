@@ -284,17 +284,24 @@ body {
     //NAVIGATION TABLE
 
     &__table {
-        background: yellowgreen;
+        border: 2px solid yellowgreen;
         // width: 100%;
+
 
         table {
             width: 100%;
+            border-collapse: collapse; 
         }
+
 
         &--header {
             border: 2px solid orangered;
         }
 
-        &--row {}
+        &--row {
+            &:not(:last-child) {
+                border-bottom: 2px solid $color-grey-light-2;
+            }
+        }
     }
 }

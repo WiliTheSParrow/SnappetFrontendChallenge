@@ -259,14 +259,19 @@ body {
 }
 
 .content__table {
-  background: yellowgreen;
+  border: 2px solid yellowgreen;
 }
 
 .content__table table {
   width: 100%;
+  border-collapse: collapse;
 }
 
 .content__table--header {
   border: 2px solid orangered;
+}
+
+.content__table--row:not(:last-child) {
+  border-bottom: 2px solid #c2c2c2;
 }
 /*# sourceMappingURL=style.css.map */
