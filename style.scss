@@ -54,7 +54,7 @@ html {
 }
 
 body {
-    font-family: 'Alegreya Sans', sans-serif;
+    font-family: 'Roboto', sans-serif;;
     color: $color-grey-dark;
     background: $color-grey-light;
 
@@ -78,6 +78,7 @@ body {
         position: absolute;
         top: 5%;
         width: 100%;
+        letter-spacing: .3rem;
     }
 
     &__text {
@@ -95,9 +96,13 @@ body {
     }
 
     &__title {
-        &--sub {}
+        &--sub {
+            font-size: 1.5rem;
+        }
 
-        &--primary {}
+        &--primary {
+            font-size: 4.5rem;
+        }
     }
 
     &__icon {
