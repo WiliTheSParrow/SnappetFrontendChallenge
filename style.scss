@@ -13,6 +13,7 @@ $color-yellow: #fee342;
 ///////////////////////////////////////
 //SHADOWS
 $shadow-base: 0 1px 2px 0 rgba(0, 0, 0, 0.2);
+$shadow-active:inset 0 1px 10px 0 rgba(0, 0, 0, 0.2);
 
 ///////////////////////////////////////
 //RESPONSIVE BREAKPOINTS & MIXINS
@@ -197,4 +198,8 @@ body {
         background-size: 1.5rem;
         background-position: right 1.5rem center;
     }
+}
+
+.active {
+    box-shadow: $shadow-active;
 }
