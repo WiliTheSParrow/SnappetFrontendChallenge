@@ -124,6 +124,20 @@ body {
     background: #fff;
     border-radius: 10px;
 
+    &__navigation{
+        background: fuchsia;
+        display: flex;
+        justify-content: space-between;
+
+        &--grade{
+            background: wheat;
+        }
+
+        &--features{
+            background: peru;
+        }
+    }
+
     &__table {
         background: yellowgreen;
     }

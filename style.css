@@ -96,6 +96,24 @@ body {
   border-radius: 10px;
 }
 
+.content__navigation {
+  background: fuchsia;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.content__navigation--grade {
+  background: wheat;
+}
+
+.content__navigation--features {
+  background: peru;
+}
+
 .content__table {
   background: yellowgreen;
 }
