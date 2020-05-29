@@ -187,7 +187,6 @@ body {
   background: url(icons/down.svg) no-repeat;
   -moz-appearance: none;
   -webkit-appearance: none;
-  appearance: none;
   background-size: 1.5rem;
   background-position: right 1.5rem center;
 }
@@ -260,11 +259,21 @@ body {
 
 .content__table {
   border: 2px solid yellowgreen;
+  font-size: 1.2rem;
 }
 
 .content__table table {
   width: 100%;
   border-collapse: collapse;
+}
+
+.content__table th {
+  text-align: left;
+  vertical-align: middle;
+}
+
+.content__table th, .content__table td {
+  padding: 1rem 0;
 }
 
 .content__table--header {
@@ -273,5 +282,27 @@ body {
 
 .content__table--row:not(:last-child) {
   border-bottom: 2px solid #c2c2c2;
+}
+
+.content__table--firtcol {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.content__table--firsthd {
+  cursor: pointer;
+}
+
+.content__table--icon {
+  width: 1.5rem;
+  height: 1.5rem;
+  margin: 0 .5rem;
+  background: #333333;
+  -webkit-mask: url(/icons/down.svg);
+          mask: url(/icons/down.svg);
 }
 /*# sourceMappingURL=style.css.map */

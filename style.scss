@@ -212,7 +212,6 @@ body {
         background: url(icons/down.svg) no-repeat;
         -moz-appearance: none;
         -webkit-appearance: none;
-        appearance: none;
         background-size: 1.5rem;
         background-position: right 1.5rem center;
     }
@@ -286,22 +285,49 @@ body {
     &__table {
         border: 2px solid yellowgreen;
         // width: 100%;
-
+        font-size: 1.2rem;
 
         table {
             width: 100%;
-            border-collapse: collapse; 
+            border-collapse: collapse;
         }
 
+        th {
+            text-align: left;
+            vertical-align: middle;
+        }
+
+        th, td {
+            padding: 1rem 0;
+        }
 
         &--header {
             border: 2px solid orangered;
         }
 
         &--row {
+
             &:not(:last-child) {
                 border-bottom: 2px solid $color-grey-light-2;
             }
+
+        }
+
+        &--firtcol {
+            display: flex;
+            align-items: center;
+        }
+
+        &--firsthd{
+            cursor: pointer;
+        }
+
+        &--icon {
+            width: 1.5rem;
+            height: 1.5rem;
+            margin: 0 .5rem;
+            background: $color-grey-dark;
+            mask: url(/icons/down.svg);
         }
     }
 }
