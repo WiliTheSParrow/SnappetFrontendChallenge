@@ -92,11 +92,15 @@ body {
 //HEADER
 .header {
     // border: 2px solid orangered;
-    height: 25vh;
+    height: 30vh;
     background: $color-blue-medium;
     color: #fff;
     display: flex;
     justify-content: center;
+
+    @include respond(phone){
+        height: 45vw;
+    }
 
     &__text-box {
         // border: 2px solid violet;
@@ -128,10 +132,15 @@ body {
         &--sub {
             font-size: 1.5rem;
             font-weight: 500;
+
         }
 
         &--primary {
             font-size: 4rem;
+
+            @include respond(phone){
+                font-size: 2.4rem;
+            }
         }
     }
 
@@ -141,6 +150,11 @@ body {
         margin: .5rem;
         background: #fff;
         mask: url(/icons/gift.svg);
+
+        @include respond(phone){
+            width: 3rem;
+            height: 3rem;
+        }
     }
 
 }
@@ -153,6 +167,10 @@ body {
     background: #fff;
     border-radius: 10px;
     padding: 3rem;
+
+    @include respond(phone){
+        margin: -15vw 5vw 0 5vw;
+    }
 
     ///////////////////////////////////////
     //NAVIGATION BAR
@@ -175,6 +193,18 @@ body {
             display: flex;
             align-items: center;
             justify-content: space-between;
+
+            @include respond(phone){
+                flex-direction: column-reverse;
+                
+            }
+        }
+
+        @include respond(phone){
+            border: 2px solid red;
+            flex-direction: column;
+            
+
         }
     }
 
@@ -290,7 +320,7 @@ body {
     //NAVIGATION TABLE
 
     &__table {
-        border: 2px solid yellowgreen;
+        // border: 2px solid yellowgreen;
         // width: 100%;
         // height: auto;
         font-size: 1.2rem;
@@ -310,21 +340,21 @@ body {
             padding: 1rem 0;
         }
 
+
+
         &--header {
-            border: 2px solid orangered;
+            // border: 2px solid orangered;
         }
 
         &--row {
 
             &:not(:last-child) {
-                border-bottom: 2px solid $color-grey-light-2;
+                border-bottom: 1px solid $color-grey-light-2;
             }
 
         }
 
-        &--firstcol {
-            
-        }
+        &--firstcol {}
 
         &--thirdcol {
             text-align: center;

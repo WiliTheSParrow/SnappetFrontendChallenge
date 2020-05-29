@@ -20,7 +20,7 @@ body {
 }
 
 .header {
-  height: 25vh;
+  height: 30vh;
   background: #35a3d7;
   color: #fff;
   display: -webkit-box;
@@ -29,6 +29,12 @@ body {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+}
+
+@media only screen and (max-width: 34em) {
+  .header {
+    height: 45vw;
+  }
 }
 
 .header__text-box {
@@ -76,6 +82,12 @@ body {
   font-size: 4rem;
 }
 
+@media only screen and (max-width: 34em) {
+  .header__title--primary {
+    font-size: 2.4rem;
+  }
+}
+
 .header__icon {
   width: 4.7rem;
   height: 4.7rem;
@@ -85,11 +97,24 @@ body {
           mask: url(/icons/gift.svg);
 }
 
+@media only screen and (max-width: 34em) {
+  .header__icon {
+    width: 3rem;
+    height: 3rem;
+  }
+}
+
 .content {
   margin: -3vw 5vw 0 5vw;
   background: #fff;
   border-radius: 10px;
   padding: 3rem;
+}
+
+@media only screen and (max-width: 34em) {
+  .content {
+    margin: -15vw 5vw 0 5vw;
+  }
 }
 
 .content__navigation {
@@ -124,6 +149,25 @@ body {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+}
+
+@media only screen and (max-width: 34em) {
+  .content__navigation--features {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+  }
+}
+
+@media only screen and (max-width: 34em) {
+  .content__navigation {
+    border: 2px solid red;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
 }
 
 .content__icon {
@@ -257,7 +301,6 @@ body {
 }
 
 .content__table {
-  border: 2px solid yellowgreen;
   font-size: 1.2rem;
 }
 
@@ -276,12 +319,8 @@ body {
   padding: 1rem 0;
 }
 
-.content__table--header {
-  border: 2px solid orangered;
-}
-
 .content__table--row:not(:last-child) {
-  border-bottom: 2px solid #c2c2c2;
+  border-bottom: 1px solid #c2c2c2;
 }
 
 .content__table--thirdcol {
