@@ -44,6 +44,28 @@ $bp-mobile:34em;
 }
 
 ///////////////////////////////////////
+//BUTTON ANIMATION
+
+@mixin btnanimation() {
+    &:hover {
+        transform: translateY(-0.3rem);
+        box-shadow: 0 1rem 2rem rgba(#000, .2);
+    }
+
+    &:after {
+        transform: scaleX(1.4) scaleY(1.6);
+        opacity: 0;
+    }
+
+    &:active,
+    &:focus {
+        outline: none;
+        transform: translateY(-0.1rem);
+        box-shadow: 0 .5rem 1rem rgba(#000, .2);
+    }
+}
+
+///////////////////////////////////////
 //BASE
 *,
 *::before,
@@ -126,7 +148,7 @@ body {
 ///////////////////////////////////////
 //CONTENT
 .content {
-    height: 50vh;
+    // height: auto;
     margin: -3vw 5vw 0 5vw;
     background: #fff;
     border-radius: 10px;
@@ -237,22 +259,7 @@ body {
             transition: all .3s;
         }
 
-        &:hover {
-            transform: translateY(-0.3rem);
-            box-shadow: 0 1rem 2rem rgba(#000, .2);
-        }
-
-        &:after {
-            transform: scaleX(1.4) scaleY(1.6);
-            opacity: 0;
-        }
-
-        &:active,
-        &:focus {
-            outline: none;
-            transform: translateY(-0.1rem);
-            box-shadow: 0 .5rem 1rem rgba(#000, .2);
-        }
+        @include btnanimation;
 
         &--obj {
             background: $color-blue-medium;
@@ -285,6 +292,7 @@ body {
     &__table {
         border: 2px solid yellowgreen;
         // width: 100%;
+        // height: auto;
         font-size: 1.2rem;
 
         table {
@@ -297,7 +305,8 @@ body {
             vertical-align: middle;
         }
 
-        th, td {
+        th,
+        td {
             padding: 1rem 0;
         }
 
@@ -313,13 +322,18 @@ body {
 
         }
 
-        &--firtcol {
-            display: flex;
-            align-items: center;
+        &--firstcol {
+            
         }
 
-        &--firsthd{
+        &--thirdcol {
+            text-align: center;
+        }
+
+        &--firsthd {
             cursor: pointer;
+            display: flex;
+            align-items: center;
         }
 
         &--icon {
@@ -328,6 +342,27 @@ body {
             margin: 0 .5rem;
             background: $color-grey-dark;
             mask: url(/icons/down.svg);
+        }
+
+        &--btndetails {
+
+            &,
+            &:link,
+            &:visited {
+                height: 4.3rem;
+                margin: 0 0 0 1rem;
+                padding: .5rem 1.5rem;
+                background: #fff;
+                color: $color-blue-medium;
+                border: .5px solid $color-grey-light-2;
+                border-radius: 3px;
+                box-shadow: 0 1.5px 3px 0 rgba(0, 0, 0, 0.2);
+                cursor: pointer;
+                transition: all .3s;
+            }
+
+            @include btnanimation;
+
         }
     }
 }
