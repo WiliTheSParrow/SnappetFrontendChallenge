@@ -127,6 +127,12 @@ body {
   margin-bottom: 1rem;
 }
 
+.content__navigation--btns {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
 .content__navigation--grade {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -137,6 +143,16 @@ body {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+}
+
+@media only screen and (max-width: 34em) {
+  .content__navigation--grade {
+    width: 100%;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    margin-bottom: 1rem;
+  }
 }
 
 .content__navigation--features {
@@ -162,7 +178,6 @@ body {
 
 @media only screen and (max-width: 34em) {
   .content__navigation {
-    border: 2px solid red;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
@@ -234,6 +249,12 @@ body {
   background-position: right 1.5rem center;
 }
 
+@media only screen and (max-width: 34em) {
+  .content__gradeselect {
+    margin: 0;
+  }
+}
+
 .content .button__features, .content .button__features:link, .content .button__features:visited {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -252,6 +273,14 @@ body {
   cursor: pointer;
   -webkit-transition: all .3s;
   transition: all .3s;
+}
+
+@media only screen and (max-width: 34em) {
+  .content .button__features, .content .button__features:link, .content .button__features:visited {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
 }
 
 .content .button__features:hover {
@@ -298,6 +327,22 @@ body {
 .content .button__features--icon--upd {
   -webkit-mask: url(icons/refresh.svg) no-repeat;
           mask: url(icons/refresh.svg) no-repeat;
+}
+
+@media only screen and (max-width: 34em) {
+  .content .button__features--icon {
+    position: absolute;
+    float: right;
+    right: 65px;
+  }
+}
+
+@media only screen and (max-width: 34em) {
+  .content .button__features {
+    width: 100%;
+    margin: 0;
+    margin-bottom: .5rem;
+  }
 }
 
 .content__table {
