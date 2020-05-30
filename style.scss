@@ -431,6 +431,12 @@ body {
 
             @include btnanimation;
 
+            @include respond(phone) {
+                margin: 1rem 0;
+                width: 100%;
+
+            }
+
         }
 
         @include respond(phone) {
@@ -451,21 +457,31 @@ body {
             }
 
             td {
-
                 &:not(:last-child) {
                     padding: .5rem 0;
                 }
             }
 
             .content__table--firstcol {
+                // background: orangered;
                 width: 100%;
                 text-overflow: clip;
                 white-space: initial;
                 overflow: visible;
-
             }
 
-         
+            .content__table--secondcol {
+                // background: blueviolet;
+                width: 100%;
+                justify-content: center;
+            }
+
+            .content__table--thirdcol {
+                // background: yellowgreen;
+                width: 100%;
+                text-align: center;
+            }
+
         }
     }
 
@@ -494,6 +510,7 @@ body {
             border-radius: 50%;
             margin-right: .5rem;
             margin-top: .5rem;
+
         }
     }
 

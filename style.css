@@ -429,6 +429,13 @@ body {
 }
 
 @media only screen and (max-width: 34em) {
+  .content__table--btndetails {
+    margin: 1rem 0;
+    width: 100%;
+  }
+}
+
+@media only screen and (max-width: 34em) {
   .content__table table,
   .content__table thead,
   .content__table tbody,
@@ -450,6 +457,16 @@ body {
     text-overflow: clip;
     white-space: initial;
     overflow: visible;
+  }
+  .content__table .content__table--secondcol {
+    width: 100%;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .content__table .content__table--thirdcol {
+    width: 100%;
+    text-align: center;
   }
 }
 
