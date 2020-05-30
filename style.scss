@@ -5,6 +5,7 @@ $color-blue-light: #b9def1;
 
 $color-grey-light-1:#f3f5f8;
 $color-grey-light-2: #c2c2c2;
+$color-grey-light-3: #f1f1f1;
 $color-grey-dark: #333333;
 
 $color-red: #c32552;
@@ -373,8 +374,8 @@ body {
 
         th,
         td {
-            border: 2px solid orangered;
-            padding: 1rem 0;
+            // border: 2px solid orangered;
+            padding: 2rem 0;
         }
 
 
@@ -387,7 +388,7 @@ body {
 
 
             &:not(:last-child) {
-                border-bottom: 1px solid $color-grey-light-2;
+                border-bottom: 1px solid $color-grey-light-3;
             }
 
         }
@@ -395,6 +396,8 @@ body {
         &--firstcol {}
 
         &--thirdcol {
+            display: flex;
+            align-items: center;
             text-align: center;
         }
 
@@ -437,6 +440,7 @@ body {
     &__pupils {
         &--container {
             background: yellowgreen;
+            
 
             &-row1 {
                 display: flex;
@@ -444,6 +448,7 @@ body {
 
             &-row2 {
                 display: flex;
+                margin-top: .5rem;
             }
         }
 
@@ -452,6 +457,7 @@ body {
             width: 15px;
             height: 15px;
             border-radius: 50%;
+            margin-right: .5rem;
         }
     }
 }

@@ -361,15 +361,20 @@ body {
 
 .content__table th,
 .content__table td {
-  border: 2px solid orangered;
-  padding: 1rem 0;
+  padding: 2rem 0;
 }
 
 .content__table--row:not(:last-child) {
-  border-bottom: 1px solid #c2c2c2;
+  border-bottom: 1px solid #f1f1f1;
 }
 
 .content__table--thirdcol {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   text-align: center;
 }
 
@@ -442,6 +447,7 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  margin-top: .5rem;
 }
 
 .content__pupils--pupil {
@@ -449,5 +455,6 @@ body {
   width: 15px;
   height: 15px;
   border-radius: 50%;
+  margin-right: .5rem;
 }
 /*# sourceMappingURL=style.css.map */
