@@ -164,7 +164,7 @@ body {
 //CONTENT
 .content {
     // height: auto;
-    margin: -3vw 5vw 0 5vw;
+    margin: -3vw 7vw 0 7vw;
     background: #fff;
     border-radius: 10px;
     padding: 3rem;
@@ -357,7 +357,7 @@ body {
     //NAVIGATION TABLE
 
     &__table {
-        // border: 2px solid yellowgreen;
+        border: 2px solid yellowgreen;
         // width: 100%;
         // height: auto;
         font-size: 1.2rem;
@@ -365,6 +365,7 @@ body {
         table {
             width: 100%;
             border-collapse: collapse;
+            table-layout: fixed;
         }
 
         th {
@@ -374,31 +375,36 @@ body {
 
         th,
         td {
-            // border: 2px solid orangered;
+            border: 2px solid orangered;
             padding: 2rem 0;
         }
-
-
 
         &--header {
             // border: 2px solid orangered;
         }
 
         &--row {
-
-
             &:not(:last-child) {
                 border-bottom: 1px solid $color-grey-light-3;
             }
 
         }
 
-        &--firstcol {}
+        &--firstcol {
+            // width: 45%;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            overflow: hidden;
+        }
+
+        &--secondcol{
+            // width: 45%;
+        }
 
         &--thirdcol {
+            // width: 10%;
             display: flex;
-            align-items: center;
-            text-align: center;
+            justify-content: flex-end;
         }
 
         &--firsthd {
@@ -440,7 +446,7 @@ body {
     &__pupils {
         &--container {
             background: yellowgreen;
-            
+
 
             &-row1 {
                 display: flex;

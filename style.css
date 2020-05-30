@@ -105,7 +105,7 @@ body {
 }
 
 .content {
-  margin: -3vw 5vw 0 5vw;
+  margin: -3vw 7vw 0 7vw;
   background: #fff;
   border-radius: 10px;
   padding: 3rem;
@@ -346,12 +346,14 @@ body {
 }
 
 .content__table {
+  border: 2px solid yellowgreen;
   font-size: 1.2rem;
 }
 
 .content__table table {
   width: 100%;
   border-collapse: collapse;
+  table-layout: fixed;
 }
 
 .content__table th {
@@ -361,6 +363,7 @@ body {
 
 .content__table th,
 .content__table td {
+  border: 2px solid orangered;
   padding: 2rem 0;
 }
 
@@ -368,14 +371,19 @@ body {
   border-bottom: 1px solid #f1f1f1;
 }
 
+.content__table--firstcol {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
 .content__table--thirdcol {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  text-align: center;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
 }
 
 .content__table--firsthd {
