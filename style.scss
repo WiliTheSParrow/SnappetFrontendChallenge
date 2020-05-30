@@ -181,7 +181,7 @@ body {
         justify-content: space-between;
         margin-bottom: 1rem;
 
-        &--btns{
+        &--btns {
             display: flex;
         }
 
@@ -384,7 +384,7 @@ body {
         }
 
         &--row {
-            
+
 
             &:not(:last-child) {
                 border-bottom: 1px solid $color-grey-light-2;
@@ -434,13 +434,20 @@ body {
         }
     }
 
-    &__pupils{
-        &--container{
+    &__pupils {
+        &--container {
             background: yellowgreen;
-            width: 50px;
-            height: 50px;
+
+            &-row1 {
+                display: flex;
+            }
+
+            &-row2 {
+                display: flex;
+            }
         }
-        &--pupil{
+
+        &--pupil {
             background-color: $color-blue-medium;
             width: 15px;
             height: 15px;
