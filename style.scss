@@ -357,7 +357,7 @@ body {
     //NAVIGATION TABLE
 
     &__table {
-        border: 2px solid yellowgreen;
+        // border: 2px solid yellowgreen;
         // width: 100%;
         // height: auto;
         font-size: 1.2rem;
@@ -375,7 +375,7 @@ body {
 
         th,
         td {
-            border: 2px solid orangered;
+            // border: 2px solid orangered;
             padding: 2rem 0;
         }
 
@@ -391,20 +391,25 @@ body {
         }
 
         &--firstcol {
-            // width: 45%;
+            background: pink;
+            width: 45%;
             text-overflow: ellipsis;
             white-space: nowrap;
             overflow: hidden;
         }
 
-        &--secondcol{
-            // width: 45%;
+        &--secondcol {
+            background: violet;
+            width: 45%;
+         
         }
 
         &--thirdcol {
-            // width: 10%;
-            display: flex;
-            justify-content: flex-end;
+            background: blue;
+            width: 10%;
+            text-align: right;
+            /* display: flex;
+            justify-content: flex-end; */
         }
 
         &--firsthd {
@@ -422,6 +427,7 @@ body {
         }
 
         &--btndetails {
+
 
             &,
             &:link,
@@ -444,9 +450,10 @@ body {
     }
 
     &__pupils {
+
         &--container {
             background: yellowgreen;
-
+            width: 100%;
 
             &-row1 {
                 display: flex;

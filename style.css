@@ -346,7 +346,6 @@ body {
 }
 
 .content__table {
-  border: 2px solid yellowgreen;
   font-size: 1.2rem;
 }
 
@@ -363,7 +362,6 @@ body {
 
 .content__table th,
 .content__table td {
-  border: 2px solid orangered;
   padding: 2rem 0;
 }
 
@@ -372,18 +370,24 @@ body {
 }
 
 .content__table--firstcol {
+  background: pink;
+  width: 45%;
   text-overflow: ellipsis;
   white-space: nowrap;
   overflow: hidden;
 }
 
+.content__table--secondcol {
+  background: violet;
+  width: 45%;
+}
+
 .content__table--thirdcol {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
+  background: blue;
+  width: 10%;
+  text-align: right;
+  /* display: flex;
+            justify-content: flex-end; */
 }
 
 .content__table--firsthd {
@@ -443,6 +447,7 @@ body {
 
 .content__pupils--container {
   background: yellowgreen;
+  width: 100%;
 }
 
 .content__pupils--container-row1 {
