@@ -164,10 +164,14 @@ body {
 //CONTENT
 .content {
     // height: auto;
-    margin: -3vw 7vw 0 7vw;
+    margin: -2vw 7vw 0 7vw;
     background: #fff;
     border-radius: 10px;
     padding: 3rem;
+
+    @include respond(tablet) {
+        margin: -3vw 6vw 0 6vw;
+    }
 
     @include respond(phone) {
         margin: -15vw 5vw 0 5vw;
@@ -180,7 +184,7 @@ body {
         // background: fuchsia;
         display: flex;
         justify-content: space-between;
-        margin-bottom: 1rem;
+        margin-bottom: 3rem;
 
         &--btns {
             display: flex;
@@ -362,6 +366,8 @@ body {
         // height: auto;
         font-size: 1.2rem;
 
+       
+
         table {
             width: 100%;
             border-collapse: collapse;
@@ -371,16 +377,20 @@ body {
         th {
             text-align: left;
             vertical-align: middle;
+            padding-bottom: .5rem;
         }
 
-        th,
         td {
+
             // border: 2px solid orangered;
-            padding: 2rem 0;
+            &:not(:last-child) {
+                padding: 2rem 2rem 2rem 0;
+            }
         }
 
         &--header {
             // border: 2px solid orangered;
+        
         }
 
         &--row {
@@ -391,22 +401,23 @@ body {
         }
 
         &--firstcol {
-            background: pink;
-            width: 45%;
+            // background: pink;
+            width: 35%;
             text-overflow: ellipsis;
             white-space: nowrap;
             overflow: hidden;
+
         }
 
         &--secondcol {
-            background: violet;
+            // background: violet;
             width: 45%;
-         
+
         }
 
         &--thirdcol {
-            background: blue;
-            width: 10%;
+            // background: blue;
+            width: 15%;
             text-align: right;
             /* display: flex;
             justify-content: flex-end; */
@@ -415,7 +426,6 @@ body {
         &--firsthd {
             cursor: pointer;
             display: flex;
-            align-items: center;
         }
 
         &--icon {
@@ -447,30 +457,53 @@ body {
             @include btnanimation;
 
         }
+
+        @include respond(phone){
+            table, thead, tbody, th, td, tr { 
+                display: block; 
+            }
+        }
     }
 
     &__pupils {
 
         &--container {
-            background: yellowgreen;
-            width: 100%;
+            // background: yellowgreen;
+            // width: 100%;
+            display: flex;
+            flex-wrap: wrap;
 
-            &-row1 {
+            /* &-row1 {
                 display: flex;
             }
 
             &-row2 {
                 display: flex;
                 margin-top: .5rem;
-            }
+            } */
         }
 
         &--pupil {
-            background-color: $color-blue-medium;
+            background-color: $color-blue-light;
             width: 15px;
             height: 15px;
             border-radius: 50%;
             margin-right: .5rem;
+            margin-top: .5rem;
+
+            
         }
     }
+}
+
+.topgrade {
+    background-color: $color-blue-medium;
+}
+
+.average{
+    background-color: $color-blue-light;
+}
+
+.failed{
+    background-color: $color-yellow;
 }
