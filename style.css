@@ -20,7 +20,7 @@ body {
 }
 
 .header {
-  height: 30vh;
+  height: 25vh;
   background: #35a3d7;
   color: #fff;
   display: -webkit-box;
@@ -361,6 +361,7 @@ body {
 
 .content__table th,
 .content__table td {
+  border: 2px solid orangered;
   padding: 1rem 0;
 }
 
