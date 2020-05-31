@@ -2,12 +2,10 @@
 //COLOUR VARIABLES
 $color-blue-medium: #35a3d7;
 $color-blue-light: #b9def1;
-
 $color-grey-light-1:#f3f5f8;
 $color-grey-light-2: #c2c2c2;
 $color-grey-light-3: #f1f1f1;
 $color-grey-dark: #333333;
-
 $color-red: #c32552;
 $color-yellow: #fee342;
 
@@ -100,7 +98,6 @@ body {
     justify-content: center;
 
     &__text-box {
-        // border: 2px solid violet;
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -113,12 +110,10 @@ body {
         padding: .3rem;
 
         &--sub {
-            // border: 2px solid yellowgreen;
             text-align: center;
         }
 
         &--primary {
-            // border: 2px solid yellowgreen;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -182,7 +177,6 @@ body {
         }
 
         &--grade {
-            // border: 2px solid green;
             display: flex;
             align-items: center;
             justify-content: space-between;
@@ -195,7 +189,6 @@ body {
         }
 
         &--features {
-            // border: 2px solid blue;
             display: flex;
             align-items: center;
             justify-content: space-between;
@@ -206,10 +199,7 @@ body {
         }
 
         @include respond(phone) {
-            // border: 2px solid red;
             flex-direction: column;
-            // align-items: flex-start;
-
         }
     }
 
@@ -252,8 +242,6 @@ body {
             border-left: .5px solid $color-grey-light-2;
         }
     }
-
-
 
     &__gradeselect {
         height: 4.3rem;
@@ -307,7 +295,6 @@ body {
 
         &--upd {
             background: $color-red;
-
         }
 
         &--icon {
@@ -342,9 +329,6 @@ body {
     //NAVIGATION TABLE
 
     &__table {
-        // border: 2px solid yellowgreen;
-        // width: 100%;
-        // height: auto;
         font-size: 1.2rem;
 
         table {
@@ -360,16 +344,9 @@ body {
         }
 
         td {
-
-            // border: 2px solid orangered;
             &:not(:last-child) {
                 padding: 2rem 2rem 2rem 0;
             }
-        }
-
-        &--header {
-            // border: 2px solid orangered;
-
         }
 
         &--row {
@@ -379,7 +356,6 @@ body {
         }
 
         &--firstcol {
-            // background: pink;
             width: 35%;
             text-overflow: ellipsis;
             white-space: nowrap;
@@ -387,16 +363,12 @@ body {
         }
 
         &--secondcol {
-            // background: violet;
             width: 45%;
         }
 
         &--thirdcol {
-            // background: blue;
             width: 15%;
             text-align: right;
-            /* display: flex;
-            justify-content: flex-end; */
         }
 
         &--firsthd {
@@ -471,13 +443,11 @@ body {
             }
 
             .content__table--secondcol {
-                // background: blueviolet;
                 width: 100%;
                 justify-content: center;
             }
 
             .content__table--thirdcol {
-                // background: yellowgreen;
                 width: 100%;
                 text-align: center;
             }
@@ -488,19 +458,8 @@ body {
     &__pupils {
 
         &--container {
-            // background: yellowgreen;
-            // width: 100%;
             display: flex;
             flex-wrap: wrap;
-
-            /* &-row1 {
-                display: flex;
-            }
-
-            &-row2 {
-                display: flex;
-                margin-top: .5rem;
-            } */
         }
 
         &--pupil {
