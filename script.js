@@ -1,31 +1,24 @@
 var app = new Vue({
     el: '#app',
     data: {
-        selected: ''
-    }
+        selected: '',
+
+    },
+
 })
 
 
-
-
-
-
-
-
 /*
-What does the app do?
-- If dropdown selected data will change on the UI.
-- Event listener for dropdown.
-- DOM manipulation.
+id='mathGrade-3'
+id='mathGrade-4'
+id='mathGrade-5'
 
-1. If different dropdown selected, console.log out sg.
-    - Default selected.
-    - Which one is selected?
-    - Need to get the value.
-    - Need to store the value.
-2. If different dropdown selected, change the UI w DOM manipulation.
-3. Structure and shorten the code.
-    - global controller
-    - collect var-s
+
+
+
+<div class="content__pupils--pupil pupil-1 topgrade"></div>
+<div class="content__pupils--pupil pupil-4 average"></div>
+<div class="content__pupils--pupil pupil-40 failed"></div>
+
 
 */

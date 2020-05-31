@@ -11,7 +11,6 @@
 
 <body>
     <div id="app">
-        <span>Selected: {{ selected }}</span>
         <header class="header">
             <div class="header__text-box">
                 <div class="header__text header__text--sub">
@@ -38,7 +37,7 @@
                                 alt="person"></button>
                     </div>
                     <select class="content__gradeselect" name="mathGrade" id="mathGrade" v-model="selected">
-                        <option disabled value="">Please select one</option>
+                        <option disabled value="">Please select grade</option>
                         <option value="total">Total</option>
                         <option value="grade3">Math grade 3</option>
                         <option value="grade4">Math grade 4</option>
@@ -74,7 +73,7 @@
                         </tr>
                     </thead>
 
-                    <tr class="content__table--row" id="mathGrade-3">
+                    <tr class="content__table--row" id="mathGrade-3" v-if="selected == 'grade3' || selected == 'total'">
                         <td class="content__table--firstcol">123. Doortellen en terugtellen, met sporangen van 3 of meer
                             dan
                             10 en zelfs meer dan 100</td>
@@ -131,7 +130,7 @@
                                 details</button></td>
                     </tr>
 
-                    <tr class="content__table--row" id="mathGrade-4">
+                    <tr class="content__table--row" id="mathGrade-4" v-if="selected == 'grade4' || selected == 'total'">
                         <td class="content__table--firstcol">201. Splitsend vermenigvuldingen (6 x 32 = 6837) En nog
                             meer
                             rekenen dan je zou willen</td>
@@ -186,7 +185,7 @@
                                 details</button></td>
                     </tr>
 
-                    <tr class="content__table--row" id="mathGrade-5">
+                    <tr class="content__table--row" id="mathGrade-5" v-if="selected == 'grade5' || selected == 'total'">
                         <td class="content__table--firstcol">123. Doorstellen en terugtellen, met sprongen van 1, 2, 4
                             en 6
                         </td>
