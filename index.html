@@ -23,10 +23,7 @@
 
             </div>
         </header>
-
         <div class="content">
-
-
             <div class="content__navigation">
                 <div class="content__navigation--grade">
                     <div class="content__navigation--btns">
@@ -36,16 +33,15 @@
                                 class="content__icon content__icon--person" src="/icons/person.svg"
                                 alt="person"></button>
                     </div>
-                    <select class="content__gradeselect" name="mathGrade" id="mathGrade" v-model="selected">
+                    <select class="content__gradeselect" name="mathGrade" id="mathGrade" v-model="selected"
+                        v-on:change="initiateFill(selected)">
                         <option disabled value="">Please select grade</option>
-                        <option value="total">Total</option>
                         <option value="grade3">Math grade 3</option>
                         <option value="grade4">Math grade 4</option>
                         <option value="grade5">Math grade 5</option>
-                        
+
                     </select>
                 </div>
-
                 <div class="content__navigation--features">
                     <button class="button__features button__features--obj">Add learning objective
                         <div class="button__features--icon button__features--icon--obj"></div>
@@ -54,8 +50,6 @@
                             class="button__features--icon button__features--icon--upd"></div></button>
                 </div>
             </div>
-
-
             <div class="content__table">
                 <table>
                     <thead>
@@ -72,64 +66,23 @@
                             <th class="content__table--thirdcol content__table--header"></th>
                         </tr>
                     </thead>
-
                     <tr class="content__table--row" id="mathGrade-3" v-if="selected == 'grade3' || selected == 'total'">
                         <td class="content__table--firstcol">123. Doortellen en terugtellen, met sporangen van 3 of meer
                             dan
                             10 en zelfs meer dan 100</td>
-
                         <td class="content__table--secondcol">
                             <div class="content__pupils--container">
 
-                                <div class="content__pupils--pupil pupil-1 topgrade"></div>
-                                <div class="content__pupils--pupil pupil-2 topgrade"></div>
-                                <div class="content__pupils--pupil pupil-3 topgrade"></div>
-                                <div class="content__pupils--pupil pupil-4 average"></div>
-                                <div class="content__pupils--pupil pupil-5 average"></div>
-                                <div class="content__pupils--pupil pupil-6 average"></div>
-                                <div class="content__pupils--pupil pupil-7 average"></div>
-                                <div class="content__pupils--pupil pupil-8 average"></div>
-                                <div class="content__pupils--pupil pupil-9 average"></div>
-                                <div class="content__pupils--pupil pupil-10 average"></div>
-                                <div class="content__pupils--pupil pupil-11 average"></div>
-                                <div class="content__pupils--pupil pupil-12 average"></div>
-                                <div class="content__pupils--pupil pupil-13 average"></div>
-                                <div class="content__pupils--pupil pupil-14 average"></div>
-                                <div class="content__pupils--pupil pupil-15 average"></div>
-                                <div class="content__pupils--pupil pupil-16 average"></div>
-                                <div class="content__pupils--pupil pupil-17 average"></div>
-                                <div class="content__pupils--pupil pupil-18 average"></div>
-                                <div class="content__pupils--pupil pupil-19 average"></div>
-                                <div class="content__pupils--pupil pupil-20 average"></div>
-
-                                <div class="content__pupils--pupil pupil-21 average"></div>
-                                <div class="content__pupils--pupil pupil-22 average"></div>
-                                <div class="content__pupils--pupil pupil-23 average"></div>
-                                <div class="content__pupils--pupil pupil-24 average"></div>
-                                <div class="content__pupils--pupil pupil-25 average"></div>
-                                <div class="content__pupils--pupil pupil-26 average"></div>
-                                <div class="content__pupils--pupil pupil-27 average"></div>
-                                <div class="content__pupils--pupil pupil-28 average"></div>
-                                <div class="content__pupils--pupil pupil-29 average"></div>
-                                <div class="content__pupils--pupil pupil-30 average"></div>
-                                <div class="content__pupils--pupil pupil-31 average"></div>
-                                <div class="content__pupils--pupil pupil-32 average"></div>
-                                <div class="content__pupils--pupil pupil-33 average"></div>
-                                <div class="content__pupils--pupil pupil-34 average"></div>
-                                <div class="content__pupils--pupil pupil-35 average"></div>
-                                <div class="content__pupils--pupil pupil-36 average"></div>
-                                <div class="content__pupils--pupil pupil-37 average"></div>
-                                <div class="content__pupils--pupil pupil-38 average"></div>
-                                <div class="content__pupils--pupil pupil-39 average"></div>
-                                <div class="content__pupils--pupil pupil-40 average"></div>
+                                <div v-for="pupil in pupilArray">
+                                    <div v-bind:class="pupil.divClass"></div>
+                                </div>
 
                             </div>
                         </td>
-
                         <td class="content__table--thirdcol"><button class="content__table--btndetails">Show
-                                details</button></td>
+                                details</button>
+                        </td>
                     </tr>
-
                     <tr class="content__table--row" id="mathGrade-4" v-if="selected == 'grade4' || selected == 'total'">
                         <td class="content__table--firstcol">201. Splitsend vermenigvuldingen (6 x 32 = 6837) En nog
                             meer
@@ -137,117 +90,35 @@
                         <td class="content__table--secondcol">
                             <div class="content__pupils--container">
 
-                                <div class="content__pupils--pupil pupil-1 topgrade"></div>
-                                <div class="content__pupils--pupil pupil-2 topgrade"></div>
-                                <div class="content__pupils--pupil pupil-3 topgrade"></div>
-                                <div class="content__pupils--pupil pupil-4 average"></div>
-                                <div class="content__pupils--pupil pupil-5 average"></div>
-                                <div class="content__pupils--pupil pupil-6 average"></div>
-                                <div class="content__pupils--pupil pupil-7 average"></div>
-                                <div class="content__pupils--pupil pupil-8 average"></div>
-                                <div class="content__pupils--pupil pupil-9 average"></div>
-                                <div class="content__pupils--pupil pupil-10 average"></div>
-                                <div class="content__pupils--pupil pupil-11 average"></div>
-                                <div class="content__pupils--pupil pupil-12 average"></div>
-                                <div class="content__pupils--pupil pupil-13 average"></div>
-                                <div class="content__pupils--pupil pupil-14 average"></div>
-                                <div class="content__pupils--pupil pupil-15 average"></div>
-                                <div class="content__pupils--pupil pupil-16 average"></div>
-                                <div class="content__pupils--pupil pupil-17 average"></div>
-                                <div class="content__pupils--pupil pupil-18 average"></div>
-                                <div class="content__pupils--pupil pupil-19 average"></div>
-                                <div class="content__pupils--pupil pupil-20 average"></div>
-
-                                <div class="content__pupils--pupil pupil-21 average"></div>
-                                <div class="content__pupils--pupil pupil-22 average"></div>
-                                <div class="content__pupils--pupil pupil-23 average"></div>
-                                <div class="content__pupils--pupil pupil-24 average"></div>
-                                <div class="content__pupils--pupil pupil-25 average"></div>
-                                <div class="content__pupils--pupil pupil-26 average"></div>
-                                <div class="content__pupils--pupil pupil-27 average"></div>
-                                <div class="content__pupils--pupil pupil-28 average"></div>
-                                <div class="content__pupils--pupil pupil-29 average"></div>
-                                <div class="content__pupils--pupil pupil-30 average"></div>
-                                <div class="content__pupils--pupil pupil-31 average"></div>
-                                <div class="content__pupils--pupil pupil-32 average"></div>
-                                <div class="content__pupils--pupil pupil-33 average"></div>
-                                <div class="content__pupils--pupil pupil-34 average"></div>
-                                <div class="content__pupils--pupil pupil-35 average"></div>
-                                <div class="content__pupils--pupil pupil-36 average"></div>
-                                <div class="content__pupils--pupil pupil-37 average"></div>
-                                <div class="content__pupils--pupil pupil-38 failed"></div>
-                                <div class="content__pupils--pupil pupil-39 failed"></div>
-                                <div class="content__pupils--pupil pupil-40 failed"></div>
+                                <div v-for="pupil in pupilArray">
+                                    <div v-bind:class="pupil.divClass"></div>
+                                </div>
 
                             </div>
                         </td>
                         <td class="content__table--thirdcol"><button class="content__table--btndetails">Show
                                 details</button></td>
                     </tr>
-
                     <tr class="content__table--row" id="mathGrade-5" v-if="selected == 'grade5' || selected == 'total'">
                         <td class="content__table--firstcol">123. Doorstellen en terugtellen, met sprongen van 1, 2, 4
                             en 6
                         </td>
                         <td class="content__table--secondcol">
                             <div class="content__pupils--container">
-
-                                <div class="content__pupils--pupil pupil-1 topgrade"></div>
-                                <div class="content__pupils--pupil pupil-2 topgrade"></div>
-                                <div class="content__pupils--pupil pupil-3 topgrade"></div>
-                                <div class="content__pupils--pupil pupil-4 average"></div>
-                                <div class="content__pupils--pupil pupil-5 average"></div>
-                                <div class="content__pupils--pupil pupil-6 average"></div>
-                                <div class="content__pupils--pupil pupil-7 average"></div>
-                                <div class="content__pupils--pupil pupil-8 average"></div>
-                                <div class="content__pupils--pupil pupil-9 average"></div>
-                                <div class="content__pupils--pupil pupil-10 average"></div>
-                                <div class="content__pupils--pupil pupil-11 average"></div>
-                                <div class="content__pupils--pupil pupil-12 average"></div>
-                                <div class="content__pupils--pupil pupil-13 average"></div>
-                                <div class="content__pupils--pupil pupil-14 average"></div>
-                                <div class="content__pupils--pupil pupil-15 average"></div>
-                                <div class="content__pupils--pupil pupil-16 average"></div>
-                                <div class="content__pupils--pupil pupil-17 average"></div>
-                                <div class="content__pupils--pupil pupil-18 average"></div>
-                                <div class="content__pupils--pupil pupil-19 average"></div>
-                                <div class="content__pupils--pupil pupil-20 average"></div>
-
-                                <div class="content__pupils--pupil pupil-21 average"></div>
-                                <div class="content__pupils--pupil pupil-22 average"></div>
-                                <div class="content__pupils--pupil pupil-23 average"></div>
-                                <div class="content__pupils--pupil pupil-24 average"></div>
-                                <div class="content__pupils--pupil pupil-25 average"></div>
-                                <div class="content__pupils--pupil pupil-26 average"></div>
-                                <div class="content__pupils--pupil pupil-27 average"></div>
-                                <div class="content__pupils--pupil pupil-28 average"></div>
-                                <div class="content__pupils--pupil pupil-29 average"></div>
-                                <div class="content__pupils--pupil pupil-30 average"></div>
-                                <div class="content__pupils--pupil pupil-31 average"></div>
-                                <div class="content__pupils--pupil pupil-32 average"></div>
-                                <div class="content__pupils--pupil pupil-33 average"></div>
-                                <div class="content__pupils--pupil pupil-34 average"></div>
-                                <div class="content__pupils--pupil pupil-35 average"></div>
-                                <div class="content__pupils--pupil pupil-36 average"></div>
-                                <div class="content__pupils--pupil pupil-37 average"></div>
-                                <div class="content__pupils--pupil pupil-38 failed"></div>
-                                <div class="content__pupils--pupil pupil-39 failed"></div>
-                                <div class="content__pupils--pupil pupil-40 failed"></div>
-
+                                <div v-for="pupil in pupilArray">
+                                    <div v-bind:class="pupil.divClass"></div>
+                                </div>
                             </div>
                         </td>
                         <td class="content__table--thirdcol"><button class="content__table--btndetails">Show
                                 details</button></td>
                     </tr>
-
                 </table>
             </div>
-
         </div>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/vue"></script>
     <script src="/script.js"></script>
-
 </body>
 
 </html>
